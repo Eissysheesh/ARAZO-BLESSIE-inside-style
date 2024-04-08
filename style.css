@@ -542,92 +542,92 @@ img {
 
   }
 
-/* CATALOG PAGE BANNER */
-.catalogBanner_bg {
-  background: linear-gradient(
+/* CATALOG BANNER */
+.catalogbanner_bg {
+  background-image: linear-gradient(
       rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
+      rgba(255, 255, 255, 0)
     ),
     url(./img/catalog-banner.png);
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
+
   /* to center the text */
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
-.catalogBanner h1 {
+
+.catalogbanner h1 {
   font-size: 7rem;
   font-weight: 700;
   color: var(--clr-primary);
 }
-.catalogBanner p {
+.catalogbanner p {
   font-size: 3rem;
   line-height: 2.5rem;
 }
-@media screen and (max-width: 520px) {
-  .catalogBanner {
-    flex-direction: column;
-  }
-  .package_theme:nth-child(odd) {
-    flex-direction: column;
-  }
-  .package_theme {
-    flex-direction: column;
-    justify-content: center;
-  }
-.package_right{
-  justify-content: center;
-}
-}
-/* INTERIOR PACKAGE */
+/* INTERIOR DESIGN PACKAGE */
 
-.package_wrapper h2 {
+.package h2 {
   color: var(--clr-primary);
   font-size: 6rem;
   font-weight: 700;
   text-align: center;
   padding: 3rem;
 }
+
+.package_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .package_theme {
   padding: 5rem;
   display: flex;
   gap: 0.5rem;
-  justify-content: center;
+  max-width: 1500px;
+  width: 100%;
 }
-
-.package_left {
-  width: 500rem;
-  margin-left: 20rem;
-  margin-top: 5rem;
-}
-
 .package_left img {
-  width: 70rem;
+  width: 500rem;
+  max-width: 60rem;
 }
-.package_right h2 {
-  color: var(--clr-primary);
-  display: flex;
-  font-size: 6rem;
-  font-weight: 700;
+.package_right {
   text-align: center;
-  margin-left: 6rem;
-  height: -20px;
-}
-.package_right p {
-  font-size: 2rem;
-  line-height: 2.5rem;
+  justify-content: center;
   text-align: justify;
+  padding: 2rem;
 }
+
 .package_theme:nth-child(odd) {
   background-color: var(--clr-semilight);
   flex-direction: row-reverse;
-  display: flex;
-  margin: auto;
+  justify-content: space-between;
+
+.package_right {
+    text-align: center;
+    justify-content: center;
+    text-align: justify;
+  }
 }
 
+/* INTERIOR DESIGN MOBILE */
+
+@media screen and (max-width: 520px) {
+  .catalogbanner {
+    flex-direction: column;
+  }
+  .package_theme {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .package_theme:nth-child(odd) {
+    flex-direction: column;
+  }
+}
 /* UPDATES PAGE*/
 .updates{
   padding: 50px 0;
@@ -764,6 +764,26 @@ justify-content: space-between;
   font-size: 3rem;
   text-align: center;
 
+}
+/* updates mobile */
+@media (max-width: 520px) {
+  .updates{
+  flex-direction: column;
+  }
+  .updates_wrapper img{
+      display: none;
+  }
+  .updatescard_wrapper{
+      flex-direction: column;
+  }
+  .updatescard_main{
+      flex-direction: column;
+  }
+  .updatescard_wrapper{
+      grid-template-columns: 1fr;
+      display: grid;
+
+  }
 }
 /* CONTACT */
 .contacts{
